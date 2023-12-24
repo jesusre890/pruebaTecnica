@@ -6,32 +6,34 @@ type ThemeProp={
 };
 
 export enum themePalette {
-  BG="#12181b",
-  PRIMARY = "#F86260"
+  BG="#FFFFF",
+  PRIMARY="#F86260",
+  FONT_GLOBAL = "'JetBrains Mono', monospace",
 }
 
-const theme=createTheme({
+const theme = createTheme({
   palette: {
     mode: "dark",
     background: {
       default: themePalette.BG,
+      paper: themePalette.BG,
     },
     primary: {
-      main: themePalette.PRIMARY
+      main: themePalette.PRIMARY,
     },
   },
   components: {
     MuiButton: {
       defaultProps: {
-        style:{
+        style: {
           textTransform: "none",
           boxShadow: "none",
           borderRadius: "0.5em",
-        }
-      }
-    }
-  }
-})
+        },
+      },
+    },
+  },
+});
 
 export const ThemeConfig: React.FC<ThemeProp> =({children}) => {
   return (

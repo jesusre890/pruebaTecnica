@@ -9,11 +9,14 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar: React.FC<{}> = () => {
+  const navigate = useNavigate();
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed">
+    <Box sx={{ flexGrow: 1, background: "#F86260" }}>
+      <AppBar position="sticky">
         <Toolbar>
           <Container maxWidth="xl">
             <Grid
@@ -23,12 +26,14 @@ export const Navbar: React.FC<{}> = () => {
               alignItems="center"
             >
               <Grid item>
-                <Typography>App</Typography>
+                <Typography fontSize="larger">App</Typography>
               </Grid>
               <Grid item>
                 <Stack spacing={2} direction="row">
-                  <Button variant="contained">Login</Button>
-                  <Button variant="outlined">Register</Button>
+                  <Button variant="contained" onClick={() => navigate("login")}>
+                    <Typography>Login</Typography>
+                  </Button>
+                  <Button variant="contained">Register</Button>
                 </Stack>
               </Grid>
             </Grid>
