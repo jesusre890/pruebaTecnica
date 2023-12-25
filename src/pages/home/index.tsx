@@ -12,12 +12,12 @@ export const HomePage: React.FC<{}> = () => {
     setPage(value);
   };
 
-  const startIndex = (page - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const visibleItems = Array.from({ length: totalItems }).slice(
-    startIndex,
-    endIndex
-  );
+  //const startIndex = (page - 1) * itemsPerPage;
+  //const endIndex = startIndex + itemsPerPage;
+  //const visibleItems = Array.from({ length: totalItems }).slice(
+  //  startIndex,
+  //  endIndex
+  //);
 
   return (
     <Container maxWidth="xl">

@@ -9,6 +9,7 @@ import React from "react";
 import { MdAddShoppingCart } from "react-icons/md";
 import Modal from "@mui/material/Modal";
 import { Box } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const style = {
   position: "absolute" as "absolute",
@@ -26,7 +27,8 @@ const style = {
 export const CardComponent: React.FC<{}> = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose=() => setOpen(false);
+  const navigate=useNavigate();
 
   return (
     <Card sx={{ maxWidth: 250, boxShadow: 5, borderRadius: 5 }}>
@@ -88,7 +90,10 @@ export const CardComponent: React.FC<{}> = () => {
                 <MdAddShoppingCart />
               </Button>
             </CardActions>
-            <CardActions sx={{ justifyContent: "space-around" }}>
+            <CardActions
+              sx={{ justifyContent: "space-around" }}
+              onClick={() => navigate("preferencias")}
+            >
               <Button
                 fullWidth
                 onClick={handleOpen}
