@@ -41,7 +41,7 @@ export const HeaderComponent: React.FC<HeaderProps> = ({
                 </Typography>
               </Grid>
               {element !== undefined && (
-                <Grid sx={{ mt: 2, width: "100%" }} item>
+                <Grid sx={{ mt: 2, width: "100%"}} item>
                   {element}
                 </Grid>
               )}
