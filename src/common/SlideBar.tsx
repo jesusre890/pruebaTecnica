@@ -64,7 +64,7 @@ export const Slidebar: React.FC<{}> = (props: Props) => {
             </ListItem>
           ))}
         </List>
-        <List sx={{ mb: 20 }}>
+        <List sx={{ mb: 12 }}>
           {["Carrito"].map((text) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
@@ -165,7 +165,7 @@ export const Slidebar: React.FC<{}> = (props: Props) => {
         component="main"
         sx={{
           flexGrow: 1,
-          p: 3,
+          p: 1,
           width: { lg: `calc(100% - ${drawerWidth}px)` },
         }}
       >

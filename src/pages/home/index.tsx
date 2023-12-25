@@ -33,7 +33,7 @@ export const HomePage: React.FC<{}> = () => {
             <Grid
               container
               spacing={2}
-              justifyContent={{ sm: "center",md: "center",lg: "center" }}
+              justifyContent={"center"}
             >
               <Grid item spacing={3}>
                 <CardComponent />
