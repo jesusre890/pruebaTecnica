@@ -101,14 +101,15 @@ export const Slidebar: React.FC<{}> = (props: Props) => {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
-        position="sticky"
+        position="sticky" 
         sx={{
-          width: { lg: `calc(100% - ${drawerWidth}px)` },
-          ml: { lg: `${drawerWidth}px` },
-          background: "#F86260"
+          width: { md: 0 },
+          height: { md: 0 },
+          ml: { lg: `0 px` },
+          background: "#F86260",
         }}
       >
-        <Toolbar sx={{justifyContent: "space-between"}}>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -140,7 +141,7 @@ export const Slidebar: React.FC<{}> = (props: Props) => {
           sx={{
             display: { xs: "block", lg: "none" },
             "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
+              //boxSizing: "border-box",
               width: drawerWidth,
             },
           }}

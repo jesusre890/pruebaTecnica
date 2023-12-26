@@ -25,19 +25,17 @@ export const HomePage: React.FC<{}> = () => {
         <Box
           sx={{
             justifyContent: { sm: "center", md: "center", lg: "flex-end" },
-            ml: { lg: 30, md: 20 },
+            ml: { lg: 50, md: 30 },
           }}
         >
           <HeaderComponent title="Platos" description="Opciones" />
           <div>
             <Grid
               container
-              spacing={2}
+              spacing={5}
               justifyContent={"center"}
+              maxWidth={900}
             >
-              <Grid item spacing={3}>
-                <CardComponent />
-              </Grid>
               <Grid item spacing={3}>
                 <CardComponent />
               </Grid>
@@ -71,7 +69,7 @@ export const HomePage: React.FC<{}> = () => {
                 my: 3,
                 boxShadow: 5,
                 borderRadius: 5,
-                background: "#bdbdbd",
+                background: "#9e9e9e",
               }}
               size="large"
             />
